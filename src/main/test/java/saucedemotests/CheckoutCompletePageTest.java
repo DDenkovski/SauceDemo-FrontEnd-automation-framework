@@ -39,8 +39,6 @@ public class CheckoutCompletePageTest {
 
     @Test
     public void validationOfCompleteOrderTest() {
-
-        //validating git pull
         productsPage.clickAddToCartSLBL();
         productsPage.clickAddToCartSLFJ();
         productsPage.clickCartButton();
