@@ -51,6 +51,8 @@ public class CheckoutCompletePageTest {
         checkoutOverviewPage.clickFinishButton();
         assertTrue(checkoutCompletePage.isCheckoutCompletePageDisplayed());
         assertEquals("Thank you for your order!", checkoutCompletePage.getCheckoutCompleteOrder());
+        assertEquals("\"DM Mono\", sans-serif", checkoutCompletePage.getThankYouForYourOrderFontType());
+        assertEquals("24px", checkoutCompletePage.getThankYouForYourOrderFontSize());
         assertEquals("Your order has been dispatched, and will arrive just as fast as the pony can get there!"
                 , checkoutCompletePage.getCheckoutCompleteText());
         assertFalse(checkoutCompletePage.itemCountOnCartForCompleteOrder());

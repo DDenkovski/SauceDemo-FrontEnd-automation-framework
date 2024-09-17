@@ -36,4 +36,12 @@ public class CheckoutCompletePage {
     public Boolean itemCountOnCartForCompleteOrder(){
         return driver.findElement(cartItemNumber).getText().equals("2");
     }
+
+    public String getThankYouForYourOrderFontType(){
+        return driver.findElement(checkoutCompleteOrder).getCssValue("font-family");
+    }
+
+    public String getThankYouForYourOrderFontSize(){
+        return driver.findElement(checkoutCompleteOrder).getCssValue("font-size");
+    }
 }
