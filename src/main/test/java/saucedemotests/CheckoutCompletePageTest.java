@@ -39,8 +39,6 @@ public class CheckoutCompletePageTest {
 
     @Test
     public void validationOfCompleteOrderTest() {
-
-        // validating Complete Order Test
         productsPage.clickAddToCartSLBL();
         productsPage.clickAddToCartSLFJ();
         productsPage.clickCartButton();
