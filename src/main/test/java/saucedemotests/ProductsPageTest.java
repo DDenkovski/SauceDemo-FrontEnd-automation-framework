@@ -59,7 +59,7 @@ public class ProductsPageTest {
     }
 
     @Test
-    public void sortByPriceLowtoHighTest(){
+    public void sortByPriceLowToHighTest(){
         productsPage.selectSortingDropdownOption(2);
 
         assertEquals("Price (low to high)", productsPage.getTextFromSortingDropdown());
@@ -67,7 +67,7 @@ public class ProductsPageTest {
     }
 
     @Test
-    public void sortByPriceHightoLowTest(){
+    public void sortByPriceHighToLowTest(){
         productsPage.selectSortingDropdownOption(3);
 
         assertEquals("Price (high to low)", productsPage.getTextFromSortingDropdown());

@@ -14,6 +14,7 @@ public class ProductsPage {
     private By productsTitle = By.className("title");
     private By itemName = By.className("inventory_item_name");
     private By itemPrice = By.xpath("//*[@id=\"inventory_container\"]/div/div[1]/div[2]/div[2]/div");
+    private By orderingDropdownBox = By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select");
 
     //Sauce Labs Bike Light Scenario 1 (homework from class 34, 02.09.2024)
     private By itemSauceLabsBikeLightTitle = By.id("item_0_title_link");
@@ -48,17 +49,17 @@ public class ProductsPage {
     }
 
     public List<WebElement> getAllOptionsFromSortingDropdownBox(){
-        Select sortingDropdownBox = new Select(driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")));
+        Select sortingDropdownBox = new Select(driver.findElement(orderingDropdownBox));
         return sortingDropdownBox.getOptions();
     }
 
     public void selectSortingDropdownOption(int optionNumber){
-        Select sortingDropdownBox = new Select(driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")));
+        Select sortingDropdownBox = new Select(driver.findElement(orderingDropdownBox));
         sortingDropdownBox.selectByIndex(optionNumber);
     }
 
     public String getTextFromSortingDropdown(){
-        Select sortingDropdownBox = new Select(driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select")));
+        Select sortingDropdownBox = new Select(driver.findElement(orderingDropdownBox));
         return sortingDropdownBox.getFirstSelectedOption().getText();
     }
 
